@@ -1,0 +1,53 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+
+<div class="col-8 container">
+
+  <form action="/submitArticle" method="POST">
+
+    <div class="md-form">
+      <i class="fas fa-tag prefix dark-text"></i>
+      <input type="text" id="form-Subject" class="form-control" name="title" required>
+      <label for="form-Subject">Title</label>
+    </div>
+    <div class="md-form">
+      <i class="fas fa-pencil-alt prefix dark-text"></i>
+      <textarea id="form-text" class="form-control md-textarea" rows="3" name="content" required> </textarea>
+      <label for="form-text">content</label>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-dark black">submit</button>
+    </div>
+
+  </form>
+
+  <br><br>
+
+</div>
+
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Date</th>
+        <th scope="col">Content</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% for (let a of articles) { %>
+      <tr>
+        <th scope="row"><%= a.title %></th>
+        <th scope="row"><%= a.date %></th>
+        <th scope="row"><%= a.content %></th>
+      </tr>
+      <% } %>
+
+
+    </tbody>
+  </table>
+</div>
+
+<%- include('layouts/footer.ejs') %>

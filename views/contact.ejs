@@ -1,0 +1,96 @@
+<%- include('layouts/header.ejs') %>
+<%- include('layouts/navigation.ejs') %>
+
+<div class="container">
+
+  <!-- Section: Contact v.1 -->
+  <section class="my-5">
+
+    <!-- Section heading -->
+    <h2 class="h1-responsive font-weight-bold text-center my-5">contact me</h2>
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-lg-5 mb-lg-0 mb-4">
+
+        <form action="/submitContact" method="POST">
+
+          <!-- Form with header -->
+          <div class="card">
+            <div class="card-body">
+              <!-- Header -->
+
+              <!-- Body -->
+              <div class="md-form">
+                <i class="fas fa-user prefix dark black-text"></i>
+                <input type="text" id="form-name" class="form-control" name="name" required>
+                <label for="form-name">name</label>
+              </div>
+              <div class="md-form">
+                <i class="fas fa-envelope prefix dark black-text"></i>
+                <input type="text" id="form-email" class="form-control" name="email" required>
+                <label for="form-email">email</label>
+              </div>
+              <div class="md-form">
+                <i class="fas fa-tag prefix dark-text"></i>
+                <input type="text" id="form-Subject" class="form-control" name="subject" required>
+                <label for="form-Subject">subject</label>
+              </div>
+              <div class="md-form">
+                <i class="fas fa-pencil-alt prefix dark-text"></i>
+                <textarea id="form-text" class="form-control md-textarea" rows="3" name="message" required> </textarea>
+                <label for="form-text">message</label>
+              </div>
+              <div class="text-center">
+                <button class="btn btn-dark black">send message</button>
+              </div>
+            </div>
+          </div>
+          <!-- Form with header -->
+
+        </form>
+      </div>
+
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-lg-7">
+
+        <!--Google map-->
+        <div id="map-container-section" class="z-depth-1-half map-container-section mb-4">
+          <iframe allowtransparency="true" frameborder="0" scrolling="no" style="width: 100%; height: 400px; "
+            src="https://maps.google.com/maps?q=san%20antonio&t=&z=13&ie=UTF8&iwloc=&output=embed">
+          </iframe>
+        </div>
+        <!-- Buttons-->
+        <div class="row text-center">
+          <div class="col-md-4">
+            <i class="fas fa-map-marker-alt"></i>
+            </a>
+            <p>San Antonio, 78245</p>
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-phone"></i>
+            </a>
+            <p>(210) - 975 - 4568</p>
+          </div>
+          <div class="col-md-4">
+            <i class="fas fa-envelope"></i>
+            </a>
+            <p>Mon - Fri, 6:00 - 17:00 </p>
+          </div>
+        </div>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </section>
+  <!-- Section: Contact v.1 -->
+
+</div>
+<%- include('layouts/footer.ejs') %>
